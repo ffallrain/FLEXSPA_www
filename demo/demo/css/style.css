@@ -1,0 +1,204 @@
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,tr,td {margin:0;padding:0;}
+body {margin: 0;padding: 0;font-family: Arial,'Microsoft YaHei','微软雅黑', '宋体', Helvetica, sans-serif;font-size: 14px;font-weight: normal;background: #eee;color: #000; } 
+.body{
+	width: 100%;
+	height: auto;
+}
+.header{
+	width: 1280px;
+	margin: 0px auto;
+	height: 100px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	background: rgba(8, 59, 116, 0.95);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+.header .logo{
+	width: 110px;
+	height: 90px;
+	float: left;
+}
+.header .logo img{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 80px;
+	height: 80px;
+}
+.header .ttext{
+	width: 300px;
+	height: 100px;
+	float: left;
+}
+.header .ttext .ttext-1{
+	width: 300px;
+	height: 50px;
+	margin-top: 15px;
+}
+.header .ttext .ttext-1 h2{
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+}
+.header .tsearch{
+	width: 500px;
+	height: 100px;
+	float: right;
+}
+.header .tsearch input{
+	width: 300px;
+	height: 40px;
+	border: 1px #87CEFA solid;
+	margin-top: 30px;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-o-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	float: left;
+}
+.header .tsearch a{
+	display: block;
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	margin-left: 20px;
+	margin-top: 30px;
+	background-color: #87CEFA;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-o-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	text-decoration: none;
+	float: left;
+}
+
+.mianbao{
+	width: 1220px;
+	margin: 0px auto;
+	padding: 10px 30px;
+	height: 40px;
+	background:rgba(8, 59, 116, 0.95);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.mianbao span.posi{
+	display: block;
+	width: 400px;
+	height: 40px;
+	float: left;
+	line-height: 40px;
+}
+.mianbao span.date{
+	display: block;
+	width: 200px;
+	height: 40px;
+	float: right;
+	line-height: 40px;
+}
+
+.content{
+	width: 1280px;
+	margin: 0px auto;
+	height: 650px;
+}
+
+.footer{
+	width: 1280px;
+	margin: 0px auto;
+	height: 50px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	background: rgba(8, 59, 116, 0.95);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+.footer p{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+nav {
+  background: rgba(245, 245, 245, 0.95);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  list-style: none;
+  height: 50px;
+  background-color: #083b74;
+}
+nav ul li a {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0 0 30px;
+}
+nav ul li:hover {
+  background-color: #6ba2e0;
+}
+.active{
+	background-color: #6ba2e0;
+}
+
+.index {
+  width: 150px;
+  height: 50px;
+}
+
+.Introduction {
+  width: 150px;
+  height: 50px;
+}
+
+.Search {
+  width: 150px;
+  height: 50px;
+}
+
+.Browse {
+ width: 150px;
+  height: 50px;
+}
+
+.Download {
+  width: 150px;
+  height: 50px;
+}
+
+.Methods {
+  width: 150px;
+  height: 50px;
+}
+.FAQ {
+  width: 150px;
+  height: 50px;
+}
+.Links {
+  width: 150px;
+  height: 50px;
+}
+
+body {
+  background: #e5e5e5;
+  font-family: 'Microsoft YaHei', sans-serif;
+  font-size: 18px;
+}

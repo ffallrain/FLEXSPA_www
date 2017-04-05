@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Introduction</title>
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+		<link rel="stylesheet" href="css/introduction.css" media="screen" type="text/css" />
+		<link href="css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="body">
+			<div class="header">
+				<div class="logo">
+					<img src="img/logo.png" />
+				</div>
+				<div class="ttext">
+					<div class="ttext-1">
+						<h2>Flex-Site databank</h2>
+					</div>
+					<div>
+						<span>
+							When protein meets ligand
+						</span>
+					</div>
+				</div>
+				<div class="tsearch">
+					<input type="text" />
+					<a href="javascript:;">GO</a>
+				</div>
+			</div>
+			<div class="mianbao">
+				<span class="posi">
+					Introduction /
+				</span>
+				<span class="date" id="date">
+					
+				</span>
+			</div>
+			<div class="content">
+				<div class="left-menu">
+					<nav>
+						<ul>
+							<li class="index"><a href="index.html">Home</a></li>
+							<li class="Introduction"><a href="Introduction.html">Introduction</a></li>
+							<li class="Search"><a href="Search.html">Search</a></li>
+							<li class="Browse"><a href="Browse.html">Browse</a></li>
+							<li class="Download"><a href="Download.html">Download</a></li>
+							<li class="Methods"><a href="Methods.html">Methods</a></li>
+							<li class="FAQ"><a href="FAQ.html">FAQ</a></li>
+							<li class="Links"><a href="Links.html">Links</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="right-content">
+					<div class="mid-content" style="width: 100%;">
+						<h1>Introduction</h1>
+						<p>
+							Protein flexibility has been recognized to play a critical role in molecular recognition. It is well known that ligand binding and releasing may induce protein conformational changes at different levels, such as side chain rotation, loop movement and
+							large-scale domain motion. One of the major barriers in structure-based drug design is to incorporate the dynamic behavior of the receptor. Several approaches accounting for partial flexibility of the receptor have been developed but still remain
+							immature.
+
+						</p>
+						<p>
+							With the advance of structural biology, the number of protein crystal structures grows quickly. The wealth of biological structural information provides an excellent opportunity for understanding the role of protein flexibility in molecular recognition.
+							Since multiple receptor structures could be combined as a conformational ensemble to represent the protein flexibility at a certain degree, we adopted a bottom-up method by starting from building up such a specialized database, named Flex-Site
+							DB, where multiple crystal conformations for each unique protein were extracted from Protein Data Bank(PDB) and stored into a relationship database. Flex-Site DB is online freely accessible to the community as a research tool for systematically
+							investigating the protein flexibility using computational methods.
+						</p>
+						<p>
+							The Flex-Site DB has some characteristics different from other protein-ligand databases:
+							<ol style="list-style-position: inside;line-height: 150%">
+								<li>Flex-Site is binding site-based. In other words, the binding site is the fundamental unit of the database.</li>
+								<li>Provide multiple crystal conformations for each protein deposited in Protein Data Bank.</li>
+								<li>Provide properties of the binding sites, such as residue normalized B-factor, residue solvent accessible surface area and residues which are clashed with ligands, to identify the critical or flexible residues.</li>
+								<li>Provide information of conformational changes of the binding sites, such as single residue sidechain movement, entire binding site conformational change and secondary structure conformational change.</li>
+								<li>Provide information of protein-ligand interaction in the binding site, such as kinds of hydrogen bond, pi-pi interaction and halogen bond.</li>
+								<li>Benchmark for evaluating conformational sampling techniques</li>
+								<li>Benchmark for flexible molecular docking.</li>
+							</ol>
+						</p>
+						<p>
+							Currently, Flex-Site DB contains 5525 binding sites for small-molecular-weight ligands derived from 30313 protein crystal structures containing 69304 chains (Table 1).
+						</p>
+						<p>
+							<table width="465" align="center" border="1" cellpadding="1" cellspacing="0">
+								<tr>
+									<th bgcolor="#FFCC99">PDBID</th>
+									<th bgcolor="#FFCC99">Apo Chains</th>
+									<th bgcolor="#FFCC99">Holo Chains</th>
+									<th bgcolor="#FFCC99">Binding Sites</th>
+								</tr>
+								<tr>
+									<td class="STYLE12">
+										<p>30313</p>
+									</td>
+									<td class="STYLE12">
+										<p>18336</p>
+									</td>
+									<td class="STYLE12">
+										<p>50968</p>
+									</td>
+									<td class="STYLE12">
+										<p>5525</p>
+									</td>
+								</tr>
+							</table>
+						</p>
+						<p>A PDB entry that contains a ligand is termed holo while the entry containing no ligand is termed apo. The binding sites mostly consist of single chain, except for 1201 entries. The 1201 binding sites consist of more than one chain. The multimeric binding sites involve identical chains, for example, homodimer HIV-1 protease (PDBID 1DIF) or two distinct chains of a heterodimer, for example, carbamoyl phosphate synthetase (PDBID 1C3O).</p>
+						<p>
+							According to the EC number of proteins, we performed the function-based classification of Flexi-Site DB, which reveals 62% of enzymes and 38% of non-enzymatic proteins (Figure 1A). We also performed the structure-based classification of Flex-Site DB (Figure 1B), which revealed that proteins of Flex-Site DB cover all the secondary structure compositions, and most of them consist of both a α-helix and β-sheet simultaneously. These classifications suggest that Flex-Site DB covers most protein families of biological systems, and analysis based on this database is meaningful.
+						</p>
+						<p>
+							Flex-Site DB contains more than 7000 different ligands. The molecular weight distribution is displayed(Figure 1C). This analysis suggests that most of these ligands are drug-like compounds.
+						</p>
+						<p>
+							Protein binding with different ligands may reveal different conformations. In Flex-Site DB, for each protein binding site, there must be at least two different conformations where one conformation must be the holo form and another conformation could be apo form or holo form. The multiple conformations of the same binding site could reveal the kinds of levels of conformational changes. Flex-Site DB covers wide range of conformational changes for binding site, helix, sheet and coil (Figure 1D).Different conformation changes enable us to systematically study the protein flexibility at different levels. It sets up the baseline to develop different levels of conformational sampling methods to treat different conformational changes.
+						</p>
+						<p style="color: #cc6600;">
+							Figure 1. The generalities of Flex-Site DB. (A) Functional classification of Flex-Site DB. (B) Structural classification of Flex-Site DB. (C) Molecular weight distribution for ligands in Flex-Site DB. (D) The conformational change of binding sites and secondary structures.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<p>版权所有 © 2016 Mozilla Firefox. 北京谋智火狐信息技术有限公司</p>
+			</div>
+		</div>
+		<script src='js/jquery.js'></script>
+		<script src="js/index.js"></script>
+		<script src="js/jquery.slideBox.js" type="text/javascript"></script>
+		<script>
+			function getNowFormatDate() {
+				var date = new Date();
+				var seperator1 = "-";
+				var seperator2 = ":";
+				var month = date.getMonth() + 1;
+				var strDate = date.getDate();
+				if (month >= 1 && month <= 9) {
+					month = "0" + month;
+				}
+				if (strDate >= 0 && strDate <= 9) {
+					strDate = "0" + strDate;
+				}
+				var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();
+				return currentdate;
+			}
+
+			function clock() {
+				$("#date").html(getNowFormatDate());
+			}
+
+			function getQueryString() {
+				var r = window.location.pathname;
+				return r.substring(r.lastIndexOf("/") + 1, r.lastIndexOf("."));
+			}
+			$(function() {
+				setInterval("clock()", 1000);
+				$("." + getQueryString()).addClass("active");
+				//获取mid-content的高度
+				var mid_content=$(".mid-content").height();
+				if(parseInt(mid_content) < 600){
+					mid_content = 600;
+				}
+				$(".content").css("height",(mid_content+40)+"px");
+				$(".right-content").css("height",(mid_content)+"px");
+			})
+		</script>
+	</body>
+
+</html>

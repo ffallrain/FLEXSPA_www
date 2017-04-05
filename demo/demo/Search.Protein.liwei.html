@@ -1,0 +1,351 @@
+<html>
+<head>
+<title>Protein</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="flex.css" type="text/css" />
+
+<script type="text/javascript">
+function zoomin(){
+//点击放大图片至原来的三倍
+  var imgNode = document.getElementById("image");
+  var width = imgNode.width;
+  var height = imgNode.height;
+  var width_tmp = width*2;
+  var height_tmp = height*2;
+  imgNode.style.width = width_tmp+"px";
+  imgNode.style.height = height_tmp+"px";
+}
+</script>
+
+
+<style type="text/css">
+<!--
+a{ text-decoration: none; color: #F4F5F7;}
+a:hover{text-decoration:underline} 
+.STYLE1 {color: #CC9933}
+.STYLE2 {
+	font-family: Author;
+	font-size: 23px;
+	font-weight: bold;
+	color: #F4F5F7;
+}
+.STYLE3 {
+        font-family: "Times";
+        font-size: 20px;
+        color: #000000;
+}
+.STYLE9 {
+	color: #F4F5F7;
+	font-size: 18px;
+	font-weight: bold;
+}
+.STYLE10 {
+	font-size: 33px;
+	font-weight: bold;
+	color: #000000;
+}
+.STYLE11 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+.STYLE12 {
+        font-size: 14px;
+        font-weight: normal;
+        color: #000000;
+}
+.SUBMIT {
+        font-size: 16px;
+        font-weight: bold;
+        color: #d68306;
+}
+.YJ{
+	padding:1px; width:250px; height:10px;
+	border: 1.9px solid #0629d6;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+
+}
+.divcss5-hidden,.divcss5-scroll{width:280px; height:250px; line-height:25px; border:1px;} 
+.divcss6-hidden,.divcss6-scroll{width:400px; height:150px; line-height:25px; border:1px;}
+.divcss7-hidden,.divcss7-scroll{width:600px; height:100px; line-height:25px; border:1px;}
+.link{color: #876101; font-size: 17px; font-weight: bold;}
+-->
+</style>
+</head>
+
+<body bgcolor="#F4F5F7" width="80%" align="center">
+<table width="80%" height="5%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1c488c" align="center">
+  <tr>
+    <td width=5%></td>
+    <td align="center" valign="middle" width=12% ><a href="index.html" class="navText "><span class="STYLE2"> Flex-SPA </a></td>
+    <td align="center" valign="middle" width=8% ><a href="Introduction.html" class="navText "><span class="STYLE9"> Introduction </a></td>
+    <td align="center" valign="middle" width=8% ><a href="Search.html" class="navText "><span class="STYLE9"> Search </a></td>
+    <td align="center" valign="middle" width=8% ><a href="Browse.html" class="navText "><span class="STYLE9"> Browse </a></td>
+    <td align="center" valign="middle" width=8% ><a href="Download.html" class="navText "><span class="STYLE9"> Download </a></td>
+    <td align="center" valign="middle" width=8% ><a href="Methods.html" class="navText "><span class="STYLE9"> Methods </a></td>
+    <td align="center" valign="middle" width=8% ><a href="FAQ.html" class="navText "><span class="STYLE9"> FAQ </a></td>
+    <td align="center" valign="middle" width=8% ><a href="Links.html" class="navText "><span class="STYLE9"> Links </a></td>
+    <td width=27%></td>
+  </tr>
+</table>
+
+<table width="80%" height="10%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td width=5%></td> 
+    <td width=8% align="center" valign="middle"><img src="./img/logo.png" width="70%" height="30%" border="0" ></td>
+    <td width=12% align="center" valign="middle" nowrap="nowrap"><span class="STYLE10">Flex-SPA&nbsp;<span class="STYLE11">databank<br ><span class="STYLE12">When protein meets ligand</span></td>
+    <td width=20%></td>
+    <td>
+      <form action="./cgi-bin/flexsite/protein_search_all.cgi" method="post" name="protein_pdbid" enctype="multipart/form-data" target="_blank">
+        <p><input type="text" name="pdbid" /></span>&nbsp;&nbsp;&nbsp;<input type="submit" name="search_id" value="GO"/></p>
+      </form>
+    </td>
+    <td width=10%></td>
+  </tr>
+</table>
+
+<hr width="80%" align="center"> 
+
+<table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr class="STYLE3" align="center">
+    <td width=10% valign="middle"></td>
+    <td width=20% valign="middle">PDB ID:&nbsp;&nbsp;&nbsp;1PY5 </td>
+    <td width=20% valign="middle">Resolution:&nbsp;&nbsp;&nbsp;2.3 &Aring;</td>
+    <td width=20% valign="middle">Free R Value:&nbsp;&nbsp;&nbsp;0.292</td>
+    <td width=20% valign="middle">Deposited Data:&nbsp;&nbsp;&nbsp;16-AUG-06</td>
+    <td width=10%></td>
+  </tr>
+</table>
+
+<hr width="80%" align="center">
+
+<table width="80%" cellspacing="0" cellpadding="0" align="center" frame="hsides" rules="cols">
+  <td width="50%" align=center><font size="4.5" color="#0099FF"><strong>Flexsible Residues</font></td>
+  <td width="50%" align=center><font size="4.5" color="#0099FF"><strong>Solvent Property Analysis</font></td>
+</table>
+
+<table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <td width="2%"></td>
+  
+  <td width="36%" rules="cols" valign="top"><font size="4" color="#000000">
+    <p><br>This protein has 1 binding site</br></p>   
+       <table border="0" cellpadding="0">
+         <tr><td><font size="4.5" color="#d68306"><strong>For Binding Site Number 1:&nbsp;&nbsp;&nbsp;</td><td><font size="4.5">&nbsp;</td></tr>
+         <tr><td><font size="4.3">Binding Site Multiple Structures:&nbsp;&nbsp;&nbsp;</td><td><font size="4.3">12</td></tr>
+         <tr><td><font size="4.3">Binding Site Multiple Complexes:&nbsp;&nbsp;&nbsp;</td><td><font size="4.3">8</td></tr>
+         <tr><td><font size="4.3">Binding Site Multiple Complexes with Different Ligands:&nbsp;&nbsp;&nbsp;</td><td><font size="4.3">8</td></tr>
+       </table>
+  </td>
+
+  <td width="2%"></td>
+
+  <td width="2%"></td>
+
+  <td width="36%" valign="top">
+    <br>
+    <table border="0" cellpadding="0" align="center" width="300" height="10">
+      <tr>
+        <td width=50% align="center" valign="top"><img src="/home/fangsb/SPA-8atc-1.pdb/binding_site1.png" width="250" height="280" border="0"/></td>
+          <td width=50% align="center" valign="top">
+            <table width="90%" align=left class="YJ"><tr align="center"><td><p><font size="4.0" color="#000000"><strong>Binding Site1 Waters </p></td></tr></table>
+            <div class="divcss5-scroll" style="overflow-x: hidden"> 
+	      <table border="0" cellpadding="0">
+	        <tr><td width=300><font size="2.5" color="#000000">Rank</td><td width=300><font size="2.5">Occupancy</td><td width=300><font size="2.5">Energy</td></tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W9</td><td width=300><font size="2.5">0.730</td><td width=300><font size="2.5">-1.598</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W11</td><td width=300><font size="2.5">0.724</td><td width=300><font size="2.5">-3.047</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W13</td><td width=300><font size="2.5">0.702</td><td width=300><font size="2.5">-1.702</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W15</td><td width=300><font size="2.5">0.684</td><td width=300><font size="2.5">-3.020</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W18</td><td width=300><font size="2.5">0.653</td><td width=300><font size="2.5">-1.437</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W21</td><td width=300><font size="2.5">0.610</td><td width=300><font size="2.5">-4.290</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W24</td><td width=300><font size="2.5">0.604</td><td width=300><font size="2.5">-5.060</td> </tr> 
+	        <tr><td width=300><font size="2.5" color="#000000">W27</td><td width=300><font size="2.5">0.730</td><td width=300><font size="2.5">-1.598</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W28</td><td width=300><font size="2.5">0.724</td><td width=300><font size="2.5">-3.047</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W31</td><td width=300><font size="2.5">0.702</td><td width=300><font size="2.5">-1.702</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W33</td><td width=300><font size="2.5">0.684</td><td width=300><font size="2.5">-3.020</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W42</td><td width=300><font size="2.5">0.653</td><td width=300><font size="2.5">-1.437</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W45</td><td width=300><font size="2.5">0.610</td><td width=300><font size="2.5">-4.290</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W49</td><td width=300><font size="2.5">0.604</td><td width=300><font size="2.5">-5.060</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W50</td><td width=300><font size="2.5">0.653</td><td width=300><font size="2.5">-1.437</td> </tr> 
+              </table>
+            </div>
+          <hr>
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="0" align="center" height="4" class="YJ" bgcolor=#d1d8ba><tr><td align=center><a class="link" href="/home/fangsb/SPA-8atc-1.pdb/graphic.pdb"> Download This Complex </a></td></tr></table>
+    <hr>
+
+    <table border="0" align="center">
+      <tr>
+        <td width=150 align="center" valign="top"><img src="/home/fangsb/SPA-8atc-1.pdb/comparsion_cry_spa_waters.png" width="100" height="90" border="0"/></td>
+        <td valign="top">
+          <table>
+            <tr><td align="center"><font size="2.5" color="#000000"><strong>Comparsion of Hydration Sites Obtained by SPA with Crystal Structure</td></tr>
+          </table>
+          <table>
+            <tr><td><font size="2.5" color="#000000">Number of hydration sites obtained by SPA:</td><td><font size="2.5">&nbsp;&nbsp;&nbsp;24</td></tr>
+            <tr><td><font size="2.5" color="#000000">Number of waters in crystal structures:</td><td><font size="2.5">&nbsp;&nbsp;&nbsp;16</td></tr>
+            <tr><td><font size="2.5" color="#000000">RMSD values of waters between SPA and crystal structures:</td><td><font size="2.5">&nbsp;&nbsp;&nbsp;0.03 &Aring;</td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <hr>
+   
+    <table border="0" align="center" width="350">
+      <tr>
+        <td valign="top">
+          <table align="center">
+            <tr><td><font size="2.5" color="#000000"><strong>Waters overlapped by ligand heavy atoms forming H-bonds with residues</td></tr>
+          </table>
+          <table border="0" align="left" valign="bottom">
+            <tr><td width="250"><font size="2.5" color="#000000">ID</td><td width="220"><font size="2.5">Occupancy</td><td width="220"><font size="2.5">Energy</td><td width="450"><font size="2.5">Overlapped by</td><td width="250"><font size="2.5">H-bonds</td></tr>
+          </table>
+          <hr>
+          <div class="divcss6-scroll" style="overflow-x: hidden"> 
+	    <table width="400" border="0">
+              <tr><td width="300"><font size="2.5" color="#000000">W9</td><td width="350"><font size="2.5">0.730</td><td width="300"><font size="2.5">-1.598</td><td width="400"><font size="2.5">C10_C11</td><td width="150"><font size="2.5">N</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W13</td><td width="250"><font size="2.5">0.702</td><td width="250"><font size="2.5">-1.702</td><td width="450"><font size="2.5">N15</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W18</td><td width="250"><font size="2.5">0.653</td><td width="250"><font size="2.5">-1.437</td><td width="450"><font size="2.5">N13</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W27</td><td width="250"><font size="2.5">0.570</td><td width="250"><font size="2.5">-1.833</td><td width="450"><font size="2.5">C14_N15_C21</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W33</td><td width="250"><font size="2.5">0.497</td><td width="250"><font size="2.5">0.374</td><td width="450"><font size="2.5">N4_C5</td><td width="250"><font size="2.5">N</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W42</td><td width="250"><font size="2.5">0.424</td><td width="250"><font size="2.5">1.032</td><td width="450"><font size="2.5">C13_C18</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W49</td><td width="250"><font size="2.5">0.400</td><td width="250"><font size="2.5">-0.433</td><td width="450"><font size="2.5">C7_C12</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="300"><font size="2.5" color="#000000">W9</td><td width="350"><font size="2.5">0.730</td><td width="300"><font size="2.5">-1.598</td><td width="400"><font size="2.5">C10_C11</td><td width="150"><font size="2.5">N</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W13</td><td width="250"><font size="2.5">0.702</td><td width="250"><font size="2.5">-1.702</td><td width="450"><font size="2.5">N15</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W18</td><td width="250"><font size="2.5">0.653</td><td width="250"><font size="2.5">-1.437</td><td width="450"><font size="2.5">N13</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W27</td><td width="250"><font size="2.5">0.570</td><td width="250"><font size="2.5">-1.833</td><td width="450"><font size="2.5">C14_N15_C21</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W33</td><td width="250"><font size="2.5">0.497</td><td width="250"><font size="2.5">0.374</td><td width="450"><font size="2.5">N4_C5</td><td width="250"><font size="2.5">N</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W42</td><td width="250"><font size="2.5">0.424</td><td width="250"><font size="2.5">1.032</td><td width="450"><font size="2.5">C13_C18</td><td width="250"><font size="2.5">Y</td></tr>
+              <tr><td width="250"><font size="2.5" color="#000000">W49</td><td width="250"><font size="2.5">0.400</td><td width="250"><font size="2.5">-0.433</td><td width="450"><font size="2.5">C7_C12</td><td width="250"><font size="2.5">Y</td></tr>
+            </table>
+          </div>
+          <hr>
+        </td>
+      </tr>
+    </table>
+    <hr>
+
+    <table border="0" align="center" width="350">
+      <tr>
+        <td valign="top">
+          <table align="center">
+            <tr><td><font size="2.5" color="#000000"><strong>First shell waters forming H-bonds with binding-site residues</td></tr>
+          </table>
+          <table border="0" align="left" valign="bottom">
+            <tr><td width="250"><font size="2.5" color="#000000">ID</td><td width="220"><font size="2.5">Atom</td><td width="220"><font size="2.5">Residue</td><td width="450"><font size="2.5">Residue atom type</td><td width="250"><font size="2.5">Number</td><td width="250"><font size="2.5">H-bond type</td><td width="25"></td></tr>
+          </table>
+          <hr>
+          <div class="divcss7-scroll" style="overflow-x: hidden"> 
+            <table border="0">
+            <tr><td width="250"><font size="2.5" color="#000000">ID</td><td width="220"><font size="2.5">Atom</td><td width="220"><font size="2.5">Residue</td><td width="450"><font size="2.5">Residue atom type</td><td width="250"><font size="2.5">Number</td><td width="250"><font size="2.5">H-bond type</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW1</td><td><font size="2.5">79_B_LEU</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW2</td><td><font size="2.5">81_B_SER</td><td><font size="2.5">Sidechain_OG</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">OW</td><td><font size="2.5">W49</td><td><font size="2.5">W49_HW1<td><font size="2.5">3</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W13</td><td><font size="2.5">HW1</td><td><font size="2.5">82_B_ASP</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">1</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W15</td><td><font size="2.5">HW1</td><td><font size="2.5">91_B_ASP</td><td><font size="2.5">Sidechain_OD2</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W18</td><td><font size="2.5">HW2</td><td><font size="2.5">152_B_ASP</td><td><font size="2.5">Sidechain_OD1</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW1</td><td><font size="2.5">79_B_LEU</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW2</td><td><font size="2.5">81_B_SER</td><td><font size="2.5">Sidechain_OG</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">OW</td><td><font size="2.5">W49</td><td><font size="2.5">W49_HW1/td><td><font size="2.5">3</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W13</td><td><font size="2.5">HW1</td><td><font size="2.5">82_B_ASP</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">1</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W15</td><td><font size="2.5">HW1</td><td><font size="2.5">91_B_ASP</td><td><font size="2.5">Sidechain_OD2</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W18</td><td><font size="2.5">HW2</td><td><font size="2.5">152_B_ASP</td><td><font size="2.5">Sidechain_OD1</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW1</td><td><font size="2.5">79_B_LEU</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW2</td><td><font size="2.5">81_B_SER</td><td><font size="2.5">Sidechain_OG</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">OW</td><td><font size="2.5">W49</td><td><font size="2.5">W49_HW1/td><td><font size="2.5">3</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W13</td><td><font size="2.5">HW1</td><td><font size="2.5">82_B_ASP</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">1</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W15</td><td><font size="2.5">HW1</td><td><font size="2.5">91_B_ASP</td><td><font size="2.5">Sidechain_OD2</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W18</td><td><font size="2.5">HW2</td><td><font size="2.5">152_B_ASP</td><td><font size="2.5">Sidechain_OD1</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW1</td><td><font size="2.5">79_B_LEU</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">HW2</td><td><font size="2.5">81_B_SER</td><td><font size="2.5">Sidechain_OG</td><td><font size="2.5">3</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W9</td><td><font size="2.5">OW</td><td><font size="2.5">W49</td><td><font size="2.5">W49_HW1/td><td><font size="2.5">3</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W13</td><td><font size="2.5">HW1</td><td><font size="2.5">82_B_ASP</td><td><font size="2.5">Backbone_O</td><td><font size="2.5">1</td><td><font size="2.5">Water1 acceptor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W15</td><td><font size="2.5">HW1</td><td><font size="2.5">91_B_ASP</td><td><font size="2.5">Sidechain_OD2</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            <tr><td><font size="2.5" color="#000000">W18</td><td><font size="2.5">HW2</td><td><font size="2.5">152_B_ASP</td><td><font size="2.5">Sidechain_OD1</td><td><font size="2.5">1</td><td><font size="2.5">Water1 donor</td></tr>
+            </table>
+          </div>
+          <hr>
+        </td>
+      </tr>
+    </table>
+    <hr>
+
+    <table border="0" align="center" width="90%">
+      <tr><td align=center><font size="4.5" color="#0099FF"><strong>Clusters</font></td></tr>
+      <tr><td align=center><font size="3.5" color="#000000" nowrap="nowrap">Number of PDBIDs: &nbsp;&nbsp;&nbsp;&nbsp;60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Chains:&nbsp;&nbsp;&nbsp;&nbsp;128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Ligands:&nbsp;&nbsp;&nbsp;&nbsp;12</font></td></tr>
+    </table><br>
+
+
+
+
+
+    <table border="0" cellpadding="0" align="center" width="300" height="10">
+      <tr>
+        <td width=50% align="center" valign="top"><img src="/home/fangsb/SPA-8atc-1.pdb/all_spa_results_supp.png" width="250" height="250" border="0"/></td>
+          <td width=50% align="center" valign="top">
+            <table width="90%" align=left class="YJ"><tr align="center"><td><p><font size="4.0" color="#000000"><strong>Superimposition of All SPA Structures </p></td></tr></table>
+            <div class="divcss5-scroll" style="overflow-x: hidden"> 
+              <table border="0" cellpadding="0">
+                <tr><td width=300><font size="2.5" color="#000000">Rank</td><td width=300><font size="2.5">Occupancy</td><td width=300><font size="2.5">Energy</td></tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W9</td><td width=300><font size="2.5">0.730</td><td width=300><font size="2.5">-1.598</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W11</td><td width=300><font size="2.5">0.724</td><td width=300><font size="2.5">-3.047</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W13</td><td width=300><font size="2.5">0.702</td><td width=300><font size="2.5">-1.702</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W15</td><td width=300><font size="2.5">0.684</td><td width=300><font size="2.5">-3.020</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W18</td><td width=300><font size="2.5">0.653</td><td width=300><font size="2.5">-1.437</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W21</td><td width=300><font size="2.5">0.610</td><td width=300><font size="2.5">-4.290</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W24</td><td width=300><font size="2.5">0.604</td><td width=300><font size="2.5">-5.060</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W27</td><td width=300><font size="2.5">0.730</td><td width=300><font size="2.5">-1.598</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W28</td><td width=300><font size="2.5">0.724</td><td width=300><font size="2.5">-3.047</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W31</td><td width=300><font size="2.5">0.702</td><td width=300><font size="2.5">-1.702</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W33</td><td width=300><font size="2.5">0.684</td><td width=300><font size="2.5">-3.020</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W42</td><td width=300><font size="2.5">0.653</td><td width=300><font size="2.5">-1.437</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W45</td><td width=300><font size="2.5">0.610</td><td width=300><font size="2.5">-4.290</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W49</td><td width=300><font size="2.5">0.604</td><td width=300><font size="2.5">-5.060</td> </tr> 
+                <tr><td width=300><font size="2.5" color="#000000">W50</td><td width=300><font size="2.5">0.653</td><td width=300><font size="2.5">-1.437</td> </tr> 
+              </table>
+            </div>
+          <hr>
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="0" align="center" height="4" class="YJ" bgcolor=#d1d8ba><tr><td align=center><a class="link" href="/home/fangsb/SPA-8atc-1.pdb/graphic.pdb"> Download This Complex </a></td></tr></table>
+    <hr>
+
+
+
+
+
+  </td>
+
+  <td width="2%"></td>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

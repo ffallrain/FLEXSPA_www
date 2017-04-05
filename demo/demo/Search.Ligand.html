@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Ligand</title>
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+		<link rel="stylesheet" href="css/search.css" media="screen" type="text/css" />
+		<link href="css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="body">
+			<div class="header">
+				<div class="logo">
+					<img src="img/logo.png" />
+				</div>
+				<div class="ttext">
+					<div class="ttext-1">
+						<h2>Flex-Site databank</h2>
+					</div>
+					<div>
+						<span>
+							When protein meets ligand
+						</span>
+					</div>
+				</div>
+				<div class="tsearch">
+					<input type="text" />
+					<a href="javascript:;">GO</a>
+				</div>
+			</div>
+			<div class="mianbao">
+				<span class="posi">
+					Search / Ligand
+				</span>
+				<span class="date" id="date">
+					
+				</span>
+			</div>
+			<div class="content">
+				<div class="left-menu">
+					<nav>
+						<ul>
+							<li class="index"><a href="index.html">Home</a></li>
+							<li class="Introduction"><a href="Introduction.html">Introduction</a></li>
+							<li class="Search"><a href="Search.html">Search</a></li>
+							<li class="Browse"><a href="Browse.html">Browse</a></li>
+							<li class="Download"><a href="Download.html">Download</a></li>
+							<li class="Methods"><a href="Methods.html">Methods</a></li>
+							<li class="FAQ"><a href="FAQ.html">FAQ</a></li>
+							<li class="Links"><a href="Links.html">Links</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="right-content">
+					<div class="mid-content" style="width: 100%;">
+						<div class="title">
+							<h4>Ligand</h4>
+						</div>
+						<div class="ligand">
+							<span style="color: #cc3300;">Structure (You should get the SMILES firstly and then do the structure search)</span>
+							<script type="text/javascript">
+						      function getSmiles() 
+						      {
+						        var drawing = document.JME.smiles();
+						        document.form.smi.value = drawing;
+						      }
+						    </script>
+							<table cellspacing="20px">
+								<form action="/cgi-bin/flexsite/ligand_structure_search.cgi" method="post" name="form" enctype="multipart/form-data" target="_blank">
+								<tr>
+									<td>
+										<applet code="JME.class" name="JME" archive="JME.jar" height="315" width="360">
+								        	You have to enable Java and JavaScritpt on your machine !
+								        </applet>
+								        <a style="left: 416.083px ! important; top: -315px ! important;" title="点击这里使 Adblock Plus 过滤该对象" class="vdlevlibxdqwkyeimfky visible ontop" href="JME.class"></a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>smiles</span>
+										<input name="smi" size="48" type="text" class="shuru">
+										<input value="Get SMILES" onClick="getSmiles()" type="button" class="btn">
+										<input value="Clear Editor" onClick="document.JME.reset()" type="button" class="btn">
+										<input value="Clear Fields" type="reset" class="btn">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span>Or upload one SMILES/MOL2 (<300kb) from file</span>
+										<input name="up_structure" type="file" >
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 style="color: #cc3300;">Search mode</h4><br />
+										<input type="radio" name="mode" value="substr" checked="checked"/> substructure search <br />
+										<input type="radio" name="mode" value="full" > full search <br />
+										<input type="radio" name="mode" value="fullfrag" > full fragment search <br />
+										<input type="radio" name="mode" value="duplicate"> duplicate search <br />
+										<input type="radio" name="mode" value="superstr" > superstructure search <br />
+										<input type="radio" name="mode" value="similar" > similarity search 
+										<input name="dissimilarity" type="text" value="0.2" class="shuru" style="width: 80px; height: 35px;"> (dissimilarity value)<br />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 style="color: #cc3300;">Chemical & Physical Properties</h4><br />
+										 <input type="text" name="str_mw_1" class="shuru">
+								         <span>=&lt;Molecular Weight &lt;=</span>
+								         <input type="text" name="str_mw_2" class="shuru" style="margin-left: 20px;">
+								         <span>e.g. 500 &lt; n &lt; 800</span><br >
+								         <input type="text" name="str_heavyatom_1" class="shuru">
+								         <span>=&lt;Heavy Atoms&lt;=</span>
+								         <input type="text" name="str_heavyatom_2" class="shuru" style="margin-left: 60px;"><span>e.g. 20 &lt; n &lt; 40</span><br >
+								         <input type="text" name="str_rotbond_1" class="shuru">
+								         <span>=&lt;Rotatable Bonds&lt;=</span>
+								         <input type="text" name="str_rotbond_2" class="shuru" style="margin-left: 35px;"><span>e.g. 2 &lt; n &lt; 4</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 style="color: #cc3300;float: left;">Search Engine</h4>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="http://www.chemaxon.com" target="_blank">
+											<img border="0" src="/flexsite/powered_by_small.gif">
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="submit" name="struct_search" value="Structure Search" style="width: 150px" class="btn"/>
+									</td>
+								</tr>
+								</form>
+								<tr>
+									<td>
+										 <span style="color: #cc3300;">Chemical ID</span>
+										 <br />
+										 <br />
+										 <form action="/cgi-bin/flexsite/ligand_id_search.cgi" method="post" name="form_id" target="_blank">
+									        <input type="text" name="chem_id" class="shuru"/> 
+									        <span>e.g. STU</span>
+									        <br />
+									        <br />
+									        <input type="submit" name="id_search" value="ID Search" class="btn"/>
+									     </form>
+									</td>
+								</tr>
+								<form action="/cgi-bin/flexsite/ligand_property_search.cgi" method="post" name="form_property" target="_blank">
+								<tr>
+									<td>
+										<span style="color: #cc3300;">Chemical & Physical Properties</span><br />
+										<br />
+								        <input type="text" name="mw_1" class="shuru"/>
+								        <span>=&lt;Molecular Weight &lt;=</span>
+								        <input type="text" name="mw_2" class="shuru" style="margin-left: 20px;">
+								        <span>e.g. 500 &lt; n &lt; 800</span><br />
+								        
+								        <input type="text" name="heavyatom_1" class="shuru">
+								        <span>=&lt;Heavy Atoms&lt;=</span>
+								        <input type="text" name="heavyatom_2" class="shuru" style="margin-left: 60px;">
+								        <span>e.g. 20 &lt; n &lt; 40</span>
+								        <br />
+								        <input type="text" name="rotbond_1" class="shuru">
+								        <span>=&lt;Rotable Bonds&lt;=</span>
+								        <input type="text" name="rotbond_2" class="shuru" style="margin-left: 50px;">
+								        <span>e.g. 2 &lt; n &lt; 4</span>
+									</td>
+									<tr>
+										<td>
+											<input type="submit" name="property_search" value="Property Search" class="btn" style="width: 150px;">
+										</td>
+									</tr>
+									</form>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<p>版权所有 © 2016 Mozilla Firefox. 北京谋智火狐信息技术有限公司</p>
+			</div>
+		</div>
+		<script src='js/jquery.js'></script>
+		<script src="js/index.js"></script>
+		<script src="js/jquery.slideBox.js" type="text/javascript"></script>
+		<script>
+			function getNowFormatDate() {
+				var date = new Date();
+				var seperator1 = "-";
+				var seperator2 = ":";
+				var month = date.getMonth() + 1;
+				var strDate = date.getDate();
+				if (month >= 1 && month <= 9) {
+					month = "0" + month;
+				}
+				if (strDate >= 0 && strDate <= 9) {
+					strDate = "0" + strDate;
+				}
+				var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();
+				return currentdate;
+			}
+
+			function reset(obj) {
+				var content = $(obj).val();
+				alert(content);
+			}
+
+			function clock() {
+				$("#date").html(getNowFormatDate());
+			}
+
+			function getQueryString() {
+				var r = window.location.pathname;
+				return r.substring(r.lastIndexOf("/") + 1, r.lastIndexOf("."));
+			}
+			$(function() {
+				setInterval("clock()", 1000);
+				$(".Search").addClass("active");
+				//获取mid-content的高度
+				var mid_content = $(".mid-content").height();
+				if (parseInt(mid_content) < 1350) {
+					mid_content = 1350;
+				}
+				$(".content").css("height", (mid_content + 40) + "px");
+				$(".right-content").css("height", (mid_content) + "px");
+			})
+		</script>
+	</body>
+
+</html>

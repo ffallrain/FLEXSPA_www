@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Methods</title>
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+		<link rel="stylesheet" href="css/methods.css" media="screen" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/zzsc.css">
+		<link rel="stylesheet" type="text/css" href="css/sstyle.css">
+		<link href="css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="body">
+			<div class="header">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="ttext">
+					<div class="ttext-1">
+						<h2>Flex-Site databank</h2>
+					</div>
+					<div>
+						<span>
+							When protein meets ligand
+						</span>
+					</div>
+				</div>
+				<div class="tsearch">
+					<input type="text" />
+					<a href="javascript:;">GO</a>
+				</div>
+			</div>
+			<div class="mianbao">
+				<span class="posi">
+					Methods /
+				</span>
+				<span class="date" id="date">
+					
+				</span>
+			</div>
+			<div class="content">
+				<div class="left-menu">
+					<nav>
+						<ul>
+							<li class="index"><a href="index.html">Home</a></li>
+							<li class="Introduction"><a href="Introduction.html">Introduction</a></li>
+							<li class="Search"><a href="Search.html">Search</a></li>
+							<li class="Browse"><a href="Browse.html">Browse</a></li>
+							<li class="Download"><a href="Download.html">Download</a></li>
+							<li class="Methods"><a href="Methods.html">Methods</a></li>
+							<li class="FAQ"><a href="FAQ.html">FAQ</a></li>
+							<li class="Links"><a href="Links.html">Links</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="right-content">
+					<div class="mid-content" style="width: 100%;">
+						<div class="title">
+							<h4>Methods</h4>
+						</div>
+						<div class="left">
+							<h4>The Flowchart of The Flex-Site DB Setup</h4>
+							<div class="step">
+								Retrieving protein crystal structures from Protein Data Bank
+							</div>
+							<div class="step">
+								Excluding Protein-Protein, Protein-DNA, and Protein-RNA
+							</div>
+							<div class="step">
+								Clustering Structures at 95% sequence identity
+							</div>
+							<div class="step">
+								Identifying biologically relevant binding sites
+							</div>
+							<div class="step">
+								Defining a union set binding site in each binding site cluster
+							</div>
+							<div class="step">
+								Ensuring the sequence identity of binding sites
+							</div>
+							<div class="step">
+								Superimposing different crystal structures of the same protein
+							</div>
+						</div>
+						<div class="container">
+						  <dl>
+							<dt>Binding Site Ensemble Creation:</dt>
+							<dd>
+					
+							  <p>The first step is protein structure selection. All the protein crystal structures are retrieved from PDB by excluding the protein-protein complexes, protein-DNA complexes, and protein-RNA complexes. Protein structures containing only CA atoms are also excluded. The alternative protein atom coordinates are deleted according to the occupancy value; only the one with the largest occupancy value is kept. The crystal structures are clustered at 95% sequence identity using the CD-HIT program to guarantee the different crystal structures grouped for the same protein.  </p>
+					
+							  <p>The second step is the identification of biologically relevant ligands. Firstly, waters, ions, metals, buffer additives, cofactors and compounds forming covalent bonds with proteins are identified and excluded from our definition of a ligand; also we exclude the ligand entries with the number of heavy atoms less than 5 or a molecular weight not within the range of 70~900 Daltons. Secondly, if different fragments of the same ligand appear in the HETATM section in the PDB structure file (judged by the adjacent heavy atoms located within 2 Å from each other), they are combined into a unique ligand. Thirdly, the numbers of inter-atomic protein-ligand contacts as well as the solvent-accessible surface area are used as criteria to exclude the non-specific ligands lying on the protein surface without forming sufficient protein-ligand interactions. Solvent-accessible surface area is calculated using DMS software.  </p>
+							  
+							  <p>The third step is the determination of a union set of binding site residues for each protein according to multiple crystal structures. The binding site is defined as residues within 4.5 Å of the selected ligand. Different complex structures of the same protein may not have the same binding site volume due to different sizes of ligands. So, it is necessary to define a united standard binding site of the different conformations of the single protein. Firstly, a pairwise sequence alignment is performed among all the crystal structures of the same protein to get the equivalent residues of each structure by using in-house scripts and the Dr. Dunbrack S2C database (http://dunbrack.fccc.edu/Guoli/s2c/index.php). Secondly, the established residue equivalencies are used to get the union set of binding sites of the same protein by in-house scripts. </p>
+							  <p>The fourth step is annotating those binding sites that have mutation residues according to the established residue equivalencies between multiple structures.  </p>
+							  <p>The final step is superimposing different structures of the single protein based on entire protein or only binding site. We select one structure as the reference structure that has the most complete sequence and the best resolution as the template for each binding site. The established residue equivalencies are used in a superposition of the structures onto the reference structure by the program Chimera or LGA. Superposition is performed using Cα atoms of paired residues of the pairwise entire proteins or pairwise binding site. For the superimposed binding site ensemble, we use NMRCLUST to cluster these multiple binding site conformations for each protein and provide representative conformations for each protein binding site.  </p>
+							</dd>
+					
+							<dt>Residue Conformation Deviation</dt>
+							<dd>
+							  <p>Atom pair distance root mean square deviation (RMSD) is calculated based on the superimposed structures (protein-based and binding site-based). We calculated the Cα, backbone, side chain, and all atoms‘ RMSDs for each paired residue, and we also calculated these four RMSDs for each paired entire binding site and all the protein secondary structures. These RMSD calculations were carried out by in-house scripts.  </p>
+							</dd>
+					
+							<dt>Normalized B-factor</dt>
+							<dd>
+					
+							  <p>The distribution of B-factors of different protein structures varies widely. However, the frequency distributions of normalized B‘-factor, which is B-value expressed in units of standard deviations of the mean value, are very similar. Therefore, in order to use B-factor values to access the protein flexibility among multiple different conformations, the B-factor should be normalized using the following equation (Equation 1):</p>
+					
+							  <p>B‘ is normalized B-factor. B is original B-factor. ‹B› is the mean value of B-factor of the protein atoms. σ(B) is the standard deviation of the B-factor of the protein atoms. We calculated the Cα, backbone, side chain, and all atoms‘ normalized B-factors for each residue of all protein crystal structures in the Flex-Site DB.</p>
+					
+							</dd>
+					
+							<dt>Solvent Accessibility:</dt>
+							<dd>
+							  <p>The solvent accessible molecular surface area (ASA) is the surface area of a molecule being accessible to the solvent, which is defined by Richards. ASA is calculated using the ‘rolling ball‘ algorithm. We used Dms to calculate the molecular surface for each residue of a molecule with the probe radius of 1.4 Å, which approximates the radius of a water molecule. The solvent accessibility is calculated as the ratio between the ASA of a residue within a three-dimensional structure and that in an extended tri-peptide (Ala-X-Ala) conformation.</p>
+							</dd>
+							
+							<dt>Steric Clash:</dt>
+							<dd>
+							  <p>For each conformation of the protein, we used Chimera (39) to identify the residues that have steric clash with a ligand when this conformation is superimposed with other conformations binding with different ligands (Equation 2):</p>
+							  <p>The overlap between two atoms is defined as the sum of their VDW radii minus the distance between them and minus an allowance for potentially hydrogen-bonded pairs. The allowance value is set to 0.6 Å. When the overlap value is larger than 1 Å, this atom pair is identified as a steric clash.</p>
+							</dd>
+							
+							<dt>Descriptors for Protein-Ligand Interaction</dt>
+							<dd>
+							  <p>Following the methods proposed by the Desiraju group, we identified and extracted halogen bonds, conventional hydrogen bonds, hydrogen bonds using CH as the hydrogen donor, hydrogen bonds using halogen as the hydrogen receptor, and hydrogen bonds using sulphur as receptor. Following the methods proposed by the Gerhard Klebe group, we identified and extracted XH…PI (X=N or O) interactions, CH…PI interactions, PI…PI interactions, atomic hydrophobicity differences (AHPDI) between ligand and protein, and the percentage of buried carbon atoms (BURCP) of the ligand. In order to more intuitively present the protein-ligand interaction information for conventional hydrogen bonds and contacts, we used HBPLUS and LIGPLOT to identify them with default settings and draw the interaction picture for each protein-ligand complex.</p>
+							</dd>
+							
+							<dt>Ligand Similarity Analysis</dt>
+							<dd>
+							  <p>All PDB formats of the ligands in the selected complexes were converted into SYBYL MOL2 format. Ligand feature fingerprints were calculated using CACTVS with default values, and the fingerprint-based similarity analysis was performed with the program SUBSET. The pair of ligands, of which the Tanimoto Coefficient is higher than 0.95, is considered structurally similar ligands. The pair of ligands, of which the Tanimoto Coefficient is lower than 0.7, is considered structurally dissimilar ligands.</p>
+							</dd>
+							
+							<dt>Data Set Creation for Binding Site Pre-organization Validation</dt>
+							<dd>
+							  <p>Firstly, in Flex-Site DB, we selected the proteins that had at least no less than five complex conformations binding with different ligands and at least one apo form. Sufficient different conformations give us the confidence to assure the residue flexibility. Secondly, since we only focus on residue side chain movement, we kept the protein of which the binding site backbone is rigid, and the side chains of binding site residues can be flexible, finally resulting in 88 different proteins, each protein containing at least six different conformations, including one apo form. For the 88 different proteins, we select one apo form to perform the multi-scale Monte Carlo sampling for the binding site residues and finally get the computational generated conformation dataset.</p>
+							</dd>
+					
+						  </dl>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<p>版权所有 © 2016 Mozilla Firefox. 北京谋智火狐信息技术有限公司</p>
+			</div>
+		</div>
+		<script src='js/jquery.js'></script>
+		<script src="js/index.js"></script>
+		<script src="js/jquery.slideBox.js" type="text/javascript"></script>
+	    <script>
+	    	function getNowFormatDate() {
+			    var date = new Date();
+			    var seperator1 = "-";
+			    var seperator2 = ":";
+			    var month = date.getMonth() + 1;
+			    var strDate = date.getDate();
+			    if (month >= 1 && month <= 9) {
+			        month = "0" + month;
+			    }
+			    if (strDate >= 0 && strDate <= 9) {
+			        strDate = "0" + strDate;
+			    }
+			    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+			            + " " + date.getHours() + seperator2 + date.getMinutes()
+			            + seperator2 + date.getSeconds();
+			    return currentdate;
+			}
+	    	
+	    	function clock(){
+	    		$("#date").html(getNowFormatDate());
+	    	}
+	    	function getQueryString(){
+	    		var r = window.location.pathname;
+				return r.substring(r.lastIndexOf("/")+1,r.lastIndexOf("."));
+	    	}
+	    	$(function(){
+	    		setInterval("clock()",1000);
+				$("."+getQueryString()).addClass("active");
+				
+				var mid_content=$(".mid-content").height();
+				if(parseInt(mid_content) < 700){
+					mid_content = 700;
+				}
+				$(".content").css("height",(mid_content+40)+"px");
+				$(".right-content").css("height",(mid_content)+"px");
+				
+				$(".container dl dt").on("click",function(){
+					var c = $(".container").height();
+					if(parseInt(c) < 1300){
+						c = 1300;
+					}
+					$(".content").css("height",(c+200)+"px");
+					$(".right-content").css("height",(c+160)+"px");
+					$(this).next().siblings("dd").css("display","none");
+				})
+				
+	    	})
+	    </script>
+	    <script type="text/javascript">
+		(function(){
+		  $('dd').filter(':nth-child(n+4)').addClass('hide');
+		  $('dl').on('click', 'dt', function() {
+			  $(this).next().slideToggle(200);
+			  
+		  });
+		  
+		 })();
+	</script>
+	</body>
+
+</html>

@@ -1,0 +1,113 @@
+.content .left-menu{
+	width: 150px;
+	height: 400px;
+	float: left;
+}
+.content .right-content{
+	width: 1070px;
+	margin-left: 20px;
+	padding: 20px;
+	padding-right: 20px;
+	min-height: 600px;
+	background: rgba(245, 245, 245, 0.95);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	float: left;
+}
+.content .right-content .mid-content{
+	width: 750px;
+	min-height: 600px;
+    margin-right: 20px;
+	float: left;
+}
+.content .right-content .mid-content .left{
+	width: 400px;
+	height: 700px;
+	float: left;
+}
+.content .right-content .mid-content .left h4{
+	padding-left: 6px;
+	color: #CC3300;
+}
+
+.content .right-content .mid-content .left .step{
+	height: auto;
+	line-height: 30px;
+	width: 95%;
+	margin: 0px auto;
+	padding: 5px;
+	background: rgba(132, 122, 255, 0.95);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-o-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+    margin-top: 20px;
+}
+.content .right-content .mid-content .container{
+	width: 630px;
+	float: left;
+}
+.mid-content .title{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+.mid-content .title h4{
+	text-align: center;
+	color: #CC3300;
+}
+.mid-content .links {
+	width: 95%;
+	height: 40px;
+	margin: 0px auto;
+	line-height: 40px;
+	color: #CC3300;
+}
+.mid-content .links a{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: blue;
+}
+.mid-content .links a:hover{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: green;
+}
+.content .right-content .mid-content h1{
+	width: 100%;
+	height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.content .right-content p{
+	width: 100%;
+    line-height: 150%;
+    margin-bottom: 10px;
+    text-indent: 2em;
+    text-justify : auto; 
+    text-align:justify;
+}
+.content .right-content .right-tips{
+	width: 300px;
+	min-height: 500px;
+	float: left;
+}
+.content .right-content .right-tips .ttop{
+	width: 300px;
+	height: 60px;
+}
+.content .right-content .right-tips .tbottom{
+	width: 300px;
+	height: 300px;
+}
+.content .right-content .right-tips .tbottom img{
+	width: 300px;
+	height: 300px;
+}
